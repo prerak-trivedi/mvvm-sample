@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">MVVM Sample</string>
+
+    <string name="title_login">Login</string>
+    <string name="title_landing">Landing</string>
+
+    <string name="literal_retry">Retry</string>
 </resources>

@@ -11,11 +11,13 @@
         android:id="@+id/landingTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@android:color/holo_red_dark"
-        android:text="Landing!"
+        android:layout_marginTop="@dimen/large_margin"
+        android:textSize="@dimen/large_text_size"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="@string/title_landing"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent" />
+        app:layout_constraintBottom_toBottomOf="parent"  />
 
 </android.support.constraint.ConstraintLayout>

@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
+
+        <!-- Activities START -->
+
         <activity android:name=".splash.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,8 +21,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".login.LoginActivity"/>
-        <activity android:name=".landing.LandingActivity"/>
+
+        <activity android:name=".login.LoginActivity"
+            android:label="@string/title_login"/>
+
+        <activity android:name=".landing.LandingActivity"
+            android:label="@string/title_landing"/>
+
+        <!-- Activities END -->
+
     </application>
 
 </manifest>

@@ -21,7 +21,14 @@ class SplashActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
         initViewModel()
+        setListeners()
         splashViewModel.init()
+    }
+
+    private fun setListeners() {
+        retryButton.setOnClickListener {
+            splashViewModel.retry()
+        }
     }
 
     private fun initViewModel() {
@@ -47,33 +54,36 @@ class SplashActivity : AppCompatActivity() {
         }
     }
 
-    private fun handleTitleChanges(it: Resource<String>?) {
+    private fun handleTitleChanges(resource: Resource<String>?) {
 
-        val status = it?.status ?: Resource.Status.ERROR
+        val status = resource?.status ?: Resource.Status.ERROR
 
         when (status) {
             Resource.Status.SUCCESS -> {
-                splashTitleTextView.text = it?.data
+                statusTextView.text = resource?.data ?: ""
                 progressLoader.visibility = View.GONE
-                splashViewModel.requestNextStep()
+                Handler().postDelayed({ splashViewModel.requestNextStep() }, 3000)
+                retryButton.visibility = View.GONE
             }
 
             Resource.Status.ERROR -> {
-                splashTitleTextView.text = "Error"
+                statusTextView.text = resource?.error?.message
                 progressLoader.visibility = View.GONE
+                retryButton.visibility = View.VISIBLE
             }
 
             Resource.Status.LOADING -> {
-                splashTitleTextView.text = it?.data
+                statusTextView.text = resource?.data
                 progressLoader.visibility = View.VISIBLE
+                retryButton.visibility = View.GONE
             }
         }
     }
 
     private fun loadNextActivity(isLogin: Boolean) {
         val clz = if (isLogin) LoginActivity::class.java else LandingActivity::class.java
-        val msg = "Loading ${if (isLogin) "Login" else "Landing"}"
-        splashTitleTextView.text = msg
+        val msg = "Proceeding to ${if (isLogin) "Login" else "Landing"} Screen..."
+        statusTextView.text = msg
 
         Handler().postDelayed({
             startActivity(Intent(this, clz))

@@ -20,6 +20,15 @@ class SplashViewModel : ViewModel() {
         titleText.postValue(Resource.loading("Loading!"))
 
         Handler().postDelayed({
+            titleText.postValue(Resource.error(IllegalArgumentException(
+                    "Oops, Something went wrong!"), null))
+        }, 3000)
+    }
+
+    fun retry() {
+        titleText.postValue(Resource.loading("Loading!"))
+
+        Handler().postDelayed({
             titleText.postValue(Resource.success("Success!"))
         }, 3000)
     }
