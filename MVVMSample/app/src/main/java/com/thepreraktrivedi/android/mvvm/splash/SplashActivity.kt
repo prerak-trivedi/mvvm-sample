@@ -1,12 +1,12 @@
 package com.thepreraktrivedi.android.mvvm.splash
 
-import android.arch.lifecycle.Observer
-import android.arch.lifecycle.ViewModelProviders
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.support.v7.app.AppCompatActivity
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
 import com.thepreraktrivedi.android.mvvm.R
 import com.thepreraktrivedi.android.mvvm.landing.LandingActivity
 import com.thepreraktrivedi.android.mvvm.login.LoginActivity
