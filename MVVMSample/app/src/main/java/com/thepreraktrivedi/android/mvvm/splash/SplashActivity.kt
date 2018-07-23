@@ -3,17 +3,19 @@ package com.thepreraktrivedi.android.mvvm.splash
 import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.thepreraktrivedi.android.mvvm.R
+import com.thepreraktrivedi.android.mvvm.base.BaseActivity
 import com.thepreraktrivedi.android.mvvm.landing.LandingActivity
 import com.thepreraktrivedi.android.mvvm.login.LoginActivity
+import com.thepreraktrivedi.android.mvvm.utils.NetworkLiveData
 import com.thepreraktrivedi.android.mvvm.utils.Resource
 import kotlinx.android.synthetic.main.activity_splash.*
 
-class SplashActivity : AppCompatActivity() {
+class SplashActivity : BaseActivity() {
 
     private lateinit var splashViewModel: SplashViewModel
 
@@ -89,5 +91,13 @@ class SplashActivity : AppCompatActivity() {
             startActivity(Intent(this, clz))
             finish()
         }, 3000)
+    }
+
+    override fun onNetworkConnectivityChanged(networkMetaData: NetworkLiveData.NetworkMetaData?) {
+        Log.d(TAG,"Network Connected: ${networkMetaData?.isConnected}")
+    }
+
+    companion object {
+        private val TAG = SplashActivity::class.java.simpleName
     }
 }
