@@ -1,4 +1,4 @@
-package com.thepreraktrivedi.android.mvvm.utils
+package com.thepreraktrivedi.android.mvvm.foundation.utils
 
 import android.content.BroadcastReceiver
 import android.content.Context

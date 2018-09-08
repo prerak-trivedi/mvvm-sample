@@ -9,10 +9,10 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.thepreraktrivedi.android.mvvm.R
 import com.thepreraktrivedi.android.mvvm.base.BaseActivity
+import com.thepreraktrivedi.android.mvvm.foundation.utils.NetworkLiveData
+import com.thepreraktrivedi.android.mvvm.foundation.utils.Resource
 import com.thepreraktrivedi.android.mvvm.landing.LandingActivity
 import com.thepreraktrivedi.android.mvvm.login.LoginActivity
-import com.thepreraktrivedi.android.mvvm.utils.NetworkLiveData
-import com.thepreraktrivedi.android.mvvm.utils.Resource
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : BaseActivity() {

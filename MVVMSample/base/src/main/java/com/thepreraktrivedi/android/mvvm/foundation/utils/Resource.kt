@@ -1,4 +1,4 @@
-package com.thepreraktrivedi.android.mvvm.utils
+package com.thepreraktrivedi.android.mvvm.foundation.utils
 
 /**
  * Inspired by https://developer.android.com/topic/libraries/architecture/guide.html#addendum.

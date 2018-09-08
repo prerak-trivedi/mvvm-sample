@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import com.thepreraktrivedi.android.mvvm.R
 import com.thepreraktrivedi.android.mvvm.base.BaseActivity
-import com.thepreraktrivedi.android.mvvm.utils.NetworkLiveData
+import com.thepreraktrivedi.android.mvvm.foundation.utils.NetworkLiveData
 
 class LandingActivity : BaseActivity() {
 

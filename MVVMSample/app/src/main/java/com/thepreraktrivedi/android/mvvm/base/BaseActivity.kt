@@ -8,7 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import com.thepreraktrivedi.android.mvvm.utils.NetworkLiveData
+import com.thepreraktrivedi.android.mvvm.foundation.utils.NetworkLiveData
 
 /**
  * Keeps a track of whether internet is connected.

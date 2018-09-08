@@ -3,8 +3,8 @@ package com.thepreraktrivedi.android.mvvm.splash
 import android.os.Handler
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.thepreraktrivedi.android.mvvm.utils.Resource
-import com.thepreraktrivedi.android.mvvm.utils.SingleLiveEvent
+import com.thepreraktrivedi.android.mvvm.foundation.utils.Resource
+import com.thepreraktrivedi.android.mvvm.foundation.utils.SingleLiveEvent
 import java.util.concurrent.ThreadLocalRandom
 
 class SplashViewModel : ViewModel() {
