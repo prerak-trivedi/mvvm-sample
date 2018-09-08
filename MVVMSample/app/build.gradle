@@ -23,7 +23,8 @@ android {
 
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    implementation "androidx.appcompat:appcompat:$appCompatVersion"
+    implementation "androidx.appcompat:appcompat:$androidXLibsVersion"
+    implementation "com.google.android.material:material:$androidXLibsVersion"
     implementation "androidx.constraintlayout:constraintlayout:$constraintLayoutVersion"
     implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
     testImplementation 'junit:junit:4.12'
