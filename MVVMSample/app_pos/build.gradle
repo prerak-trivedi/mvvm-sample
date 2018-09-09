@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 android {
     compileSdkVersion rootProject.compileSdk
     defaultConfig {
-        applicationId "com.thepreraktrivedi.android.mvvm"
+        applicationId "com.thepreraktrivedi.android.mvvm.pos"
         minSdkVersion rootProject.minSdk
         targetSdkVersion rootProject.targetSdk
         versionCode project.appVersionCode.toInteger()
@@ -27,9 +27,7 @@ dependencies {
 
     // Feature Dependency
     implementation project(":shared")
-    implementation project(":login")
-    implementation project(":payments")
-    implementation project(":reporting")
+    implementation project(":printers")
 
     // Third Party
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"

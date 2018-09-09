@@ -1,1 +1,4 @@
-include ':app', ':base', ':network', ':reporting', ':login', ':payments', ':printers', ':shared'
+include ':app', ':app_pos',
+        ':login', ':payments', ':printers', ':shared',
+        ':network', ':reporting',
+        ':base'
