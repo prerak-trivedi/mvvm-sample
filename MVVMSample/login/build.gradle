@@ -20,7 +20,8 @@ android {
 }
 
 dependencies {
+    implementation project(":base")
+    implementation project(":network")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
     testImplementation "junit:junit:$junitVersion"
 }

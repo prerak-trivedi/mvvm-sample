@@ -21,11 +21,11 @@ class Resource<T> private constructor(val status: Status,
             return Resource(Status.SUCCESS, data, null)
         }
 
-        fun <T> loading(data: T): Resource<T> {
+        fun <T> loading(data: T? = null): Resource<T> {
             return Resource(Status.LOADING, data, null)
         }
 
-        fun <T> error(error: Exception, data: T?): Resource<T> {
+        fun <T> error(error: Exception, data: T? = null): Resource<T> {
             return Resource(Status.ERROR, data, error)
         }
     }

@@ -7,14 +7,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/loginTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/large_margin"
-        android:textSize="@dimen/large_text_size"
-        android:textColor="@color/colorAccent"
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="@dimen/button_width"
+        android:layout_height="@dimen/button_height"
+        android:textSize="@dimen/default_text_size"
+        android:elevation="@dimen/default_elevation"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
         android:text="@string/title_login"
+        android:textAllCaps="false"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

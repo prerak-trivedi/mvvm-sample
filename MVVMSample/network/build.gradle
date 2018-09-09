@@ -20,7 +20,18 @@ android {
 }
 
 dependencies {
+    implementation project(":base")
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlinVersion"
-    implementation "androidx.lifecycle:lifecycle-extensions:$archLifecycleVersion"
+
+    api "androidx.annotation:annotation:$androidXLibsVersion"
+    api "com.squareup.retrofit2:retrofit:${retrofitVersion}"
+    api "com.squareup.retrofit2:converter-gson:${retrofitVersion}"
+    api "com.squareup.retrofit2:adapter-rxjava2:${retrofitVersion}"
+    api "com.squareup.okhttp3:okhttp:${okhttpVersion}"
+    api "com.squareup.okhttp3:logging-interceptor:${okhttpVersion}"
+    api "com.google.code.gson:gson:${gsonVersion}"
+    api "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+    api "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}"
+
     testImplementation "junit:junit:$junitVersion"
 }
